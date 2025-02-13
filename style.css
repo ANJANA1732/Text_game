@@ -239,12 +239,3 @@ ul { font-size: clamp(14px, 2.5vw, 20px); }
     );
     z-index: 1;
 }
-
-/* Game specific styles */
-body#game-body {
-    background-color: #666666 !important;
-}
-
-.game-section {
-    padding: clamp(40px, 10%, 80px) clamp(20px, 5%, 40px);
-}

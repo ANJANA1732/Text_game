@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Open modals
+    
     const howToPlayModal = document.getElementById("howToPlayModal");
     const characterSelectModal = document.getElementById("characterSelectModal");
     const startModal = document.getElementById("startModal");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const characterNameInNav = document.getElementById("characterNameInNav");
 
     const continueBtn = document.getElementById("continueBtn");
-    const exitBtn = document.getElementById("exitBtn");
+    
 
     let selectedCharacter = localStorage.getItem("selectedCharacter") || "Agent Rex";
 
@@ -30,12 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Stored Name:", storedCharacterName);
     console.log("Stored Image:", storedCharacterImage);
 
+
     if (storedCharacterName && storedCharacterImage) {
         updateCharacterInNav(storedCharacterName, storedCharacterImage);
     } else {
         console.log("No character selected, setting default...");
         updateCharacterInNav("Agent Rex", "/assets/Aryan.jpeg");
     }
+
 
     howToPlayBtn.onclick = () => (howToPlayModal.style.display = "block");
     closeHowToPlay.onclick = () => (howToPlayModal.style.display = "none");
@@ -59,6 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCharacterInNav("Agent Kate", "/assets/Kate.jpeg");
         characterSelectModal.style.display = "none";
     };
+
+
+   
+
+    
 
     function updateCharacterInNav(characterName, characterImage) {
         if (characterNameInNav && characterImageInNav) {
@@ -238,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 { 
                     text: "Slip out through staff exit", 
                     nextState: function(score) {
-                        if (score >= 15) return "nine";
+                        if (score >= 10) return "nine";
                         return "ten";
                         
                     },
@@ -270,17 +277,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 { 
                     text: "Steal Mafia members car and drive", 
                     nextState: function(score) {
-                        if (score >= 15) return "nine";
+                        if (score >= 10) return "nine";
                         return "ten";
                         
                     },
-                    value: "good",
+                    value: "best",
                     feedback: "Worth a shot!."
                 },
                 { 
                     text: "Try to walk out casually through main door", 
                     nextState: function(score) {
-                        if (score >= 15) return "nine";
+                        if (score >= 10) return "nine";
                         return "ten";
                         
                     },
@@ -302,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 { 
                     text: "Slip out during chaos", 
                     nextState: function(score) {
-                        if (score >= 15) return "nine";
+                        if (score >= 10) return "nine";
                         return "ten";
                        
                     },
@@ -317,7 +324,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 { 
                     text: "Use a smoke bomb", 
-                    nextState: intelScore >= 10 ? "nine" : "ten",
+                    nextState: function(score) {
+                        if (score >= 10) return "nine";
+                        return "ten";
+                    },
                     value: "best",
                     feedback: "That was nice, you came prepared!"
                 }
@@ -330,7 +340,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 { 
                     text: "Steal a motercycle and escape", 
                     nextState: function(score) {
-                        if (score >= 15) return "nine";
+                        if (score >= 10) return "nine";
                         return "ten";
                         
                     },
@@ -442,7 +452,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.setItem("intelScore", intelScore);
                 intelScoreDisplay.textContent = `Intel Score: ${intelScore}`;
                 
-                // Handle the nextState determination
+                
                 nextStateToGo = typeof option.nextState === 'function' 
                     ? option.nextState(intelScore) 
                     : option.nextState;
@@ -484,6 +494,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Initialize first state
+    
     updateState("start");
 });
