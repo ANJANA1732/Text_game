@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         "ten": {
-            img: "assets/end2.jpg",
+            img: "assets/end2.webp",
             text: " You barely Escaped ",
             options: [
              
