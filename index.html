@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+    <title>Spy Thriller</title>
+</head>
+<body>
+
+    <div class="rain"></div>
+    <div class="container">
+        <div id="title" class="title_text">Spy Thriller</div>
+
+            <div class="btn">
+
+
+                <a href="#" class="start_btns" id="howToPlayBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    How to Play
+                    
+
+                </a>
+               
+                <a href="#" class="start_btns" id="startBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Start
+                    
+
+                </a>
+
+            </div>
+
+
+            <div id="howToPlayModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeHowToPlay">&times;</span>
+                    <h2>How to Play</h2>
+                    <p>
+                        <ul>
+                            <li> Your choices determines your destiny</li>
+                            <li> You will have only <span class="time"> 15 seconds </span>per each questions</li>
+                            <li> Once you select option you can't reselect</li>
+                            <li> You can't select any option once the time goes off</li>
+                            <li> Choose wisely to reach your desired ending.</li>
+                        </ul>
+                    </p>
+                    
+                </div>
+            </div>
+
+
+            
+         
+
+            <div id="startModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeStartModal">&times;</span>
+                    <h2>Welcome to Spy Thriller</h2>
+                    <p>The underworld calls for a daring individual. Your skills will be tested. Will you survive the shadows, or will this be your end?</p>
+                    <p>In this game, you are a secret agent on a mission. Complete objectives, avoid enemies, and win the game!</p>
+
+                    <div class="modal-btn">
+
+                    <a href="#" class="start_btns" id="characterSelectBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Character Select
+                        
+    
+                    </a>
+                    <a href="#" class="start_btns" id="continueBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Continue
+                        
+    
+                    </a>
+
+                </div>
+
+
+                </div>
+            </div>
+
+
+
+
+            <div id="characterSelectModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeCharacterSelect">&times;</span>
+                    <h2>Select Your Character</h2>
+                    <div class="character-options">
+                        <div class="character" id="agentX">
+                            <img src="/assets/Aryan.jpeg" alt="Agent X">
+                            <p>Agent Rex</p>
+                        </div>
+                        <div class="character" id="agentY">
+                            <img src="/assets/Kate.jpeg" alt="Agent Y">
+                            <p>Agent Kate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+
+
+    
+<script src="game.js"></script>   
+</body>
+
+</html>

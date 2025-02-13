@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="game.css" rel="stylesheet">
+    <title>Spy Thriller</title>
+</head>
+<body id="game-body">
+
+    <div class="rain"></div>
+
+    <div class="game-container">
+        
+        <nav>
+            <div class="navbar-content">
+                <div id="characterProfile">
+                    <img id="characterImageInNav" src="assets/profile.svg"alt="Character Image">
+                    <span id="characterNameInNav"></span>
+                </div>
+                
+                <span id="intelScore"><i class="fa fa-gem"></i></span>
+                
+                
+                
+
+                <a href="index.html" id="exitBtn" class="exit-btn">Exit</a>
+            </div>
+        </nav>
+
+        <div id="screen">
+            <img id="bg-image" src="" alt="Background Image">
+        </div>
+        
+        <div id="timer">15</div>
+
+        <div id="feedbackModal" class="feedback-modal">
+            <p id="feedbackText"></p>
+        </div>
+
+        <div id="timeoutModal">
+            <p>Time's up! Mission failed.</p>
+        </div>
+        <div id="stateModal" class="modal">
+            <div class="modal-content">
+                <p id="modalText">Welcome to the game.</p>
+                <div id="optionsContainer">
+                    
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+<script src="game.js"></script>   
+</body>
+
+</html>
