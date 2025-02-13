@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 { 
                     text: "Disguise yourself as mafia member and walkout", 
                     nextState: function(score) {
-                        if (score >= 15) return "nine";
+                        if (score >= 10) return "nine";
                         return "ten";
                         
                     },

@@ -74,7 +74,7 @@ body#game-body {
     border-radius: 15px;
     z-index: 2000;
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
 }
 
@@ -233,5 +233,21 @@ body#game-body {
     .option-button {
         padding: 12px 15px;
         font-size: 14px;
+    }
+}
+
+@media (max-width: 468px) {
+    .modal {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #modalText {
+        font-size: 12px;
+    }
+
+    .option-button {
+        padding: 12px 15px;
+        font-size: 12px;
     }
 }
