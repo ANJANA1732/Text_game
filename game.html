@@ -8,23 +8,39 @@
     <title>Spy Thriller</title>
 </head>
 <body id="game-body">
+    
+    <audio id="mainTheme" preload="auto" loop>
+        <source src="assets/m1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="successTheme" preload="auto" loop>
+        <source src="assets/m2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="escapeTheme" preload="auto" loop>
+        <source src="assets/m3.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="defeatTheme" preload="auto" loop>
+        <source src="assets/m3.mp3" type="audio/mpeg">
+    </audio>
+
+    
+   
 
     <div class="rain"></div>
 
     <div class="game-container">
-        
         <nav>
             <div class="navbar-content">
                 <div id="characterProfile">
-                    <img id="characterImageInNav" src="assets/profile.svg"alt="Character Image">
+                    <img id="characterImageInNav" src="assets/profile.svg" alt="Character Image">
                     <span id="characterNameInNav"></span>
                 </div>
                 
                 <span id="intelScore"><i class="fa fa-gem"></i></span>
-                
-                
-                
 
+                <button id="soundToggle" class="sound-toggle">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                
                 <a href="index.html" id="exitBtn" class="exit-btn">Exit</a>
             </div>
         </nav>
@@ -42,19 +58,15 @@
         <div id="timeoutModal">
             <p>Time's up! Mission failed.</p>
         </div>
+
         <div id="stateModal" class="modal">
             <div class="modal-content">
                 <p id="modalText">Welcome to the game.</p>
-                <div id="optionsContainer">
-                    
-                </div>
+                <div id="optionsContainer"></div>
             </div>
         </div>
-
-        
-
     </div>
-<script src="game.js"></script>   
-</body>
 
+    <script src="game.js"></script>   
+</body>
 </html>
